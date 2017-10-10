@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<title>Chatter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/w3-theme.css">
+<link rel="stylesheet" href="css/w3-fas.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body onload="checkUser()">
+<div class="w3-sidebar w3-bar-block w3-card-2 w3-2017-navy-peony" style="width:18%">
+    <div class="w3-dropdown-hover" style="height:10%">
+        <button class="w3-button w3-large w3-2017-navy-peony" ><p id="dp"></p>
+        <i class="fa fa-caret-down"></i>
+        </button>
+    <div class="w3-dropdown-content w3-bar-block w3-2017-navy-peony">
+        <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display='block'">
+            Account Settings</a>
+        <a href="#" class="w3-bar-item w3-button">Manage Friends</a>
+        <a href="#" class="w3-bar-item w3-button" onclick="logout()">Logout</a>        
+    </div>
+</div> 
+  <a href="#" class="w3-bar-item w3-button" style="color:moccasin">Link 1</a> 
+  <a href="#" class="w3-bar-item w3-button" style="color:moccasin">Link 2</a> 
+  <a href="#" class="w3-bar-item w3-button" style="color:moccasin">Link 3</a> 
+</div>
+<div style="margin-left:18%">
+    <div class="w3-container w3-2017-navy-peony">
+        <h1 style="color:moccasin">My Page</h1>
+    </div>    
+</div>     
+
+
+  <div align="center" id="id01" class="w3-modal">
+    <div class="w3-modal-content  w3-2017-navy-peony">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>
+            <h1 style="color:moccasin">
+                <script >document.write(name);</script>                                        
+            </h1>
+        </p>
+        <img src="images/login.png" alt="" >
+        <p>
+            <h3>
+                <script >document.write(userStatus);</script>                                                            
+            </h3>
+        </p>
+        <button type="button" class="w3-button w3-xlarge w3-2017-navy-peony" style="color:moccasin" >Update Status</button><br>
+        <button type="button" class="w3-button w3-xlarge w3-2017-navy-peony" style="color:moccasin" >Update Image</button><br>        
+      </div>
+    </div>
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script src="js/FirebaseData.js"></script>
+</body>
+</html>

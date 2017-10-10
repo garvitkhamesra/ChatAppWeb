@@ -1,0 +1,49 @@
+<html>
+<title>Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/w3-theme.css">
+<link rel="stylesheet" href="css/w3-fas.css">
+
+<body>
+  <br><br>
+<div class="w3-container" align="center" style="padding: 20px;">  
+  <div class="w3-card-24" style="width: 25%">
+    <header class="w3-container w3-2017-navy-peony ">
+        <h1 align="center" style="color:moccasin">Registration</h1>
+    </header>
+
+    <form class="w3-container" action="" method="POST">
+      <p>
+        <label style="float:left">Username</label><br>          
+        <input class="w3-input w3-border" type="text" required placeholder="Name" id="reg_name" name="reg_name" onblur="validateName(name)">
+        <span class="w3-tag w3-padding w3-round-small w3-red w3-center" id="nameError" style="display: none;">You can only use alphabetic characters, hyphens and apostrophes</span>
+      </p>
+
+      <p>
+        <label style="float:left">Email id</label><br>          
+        <input class="w3-input w3-border" type="email" required placeholder="Email address" id="reg_email" name="reg_email" onblur="validateEmail(value)">
+        <span class="w3-tag w3-padding w3-round-small w3-red w3-center" id="emailError" style="display: none;">You must enter a valid email address</span>
+      </p>
+      
+      <p>     
+        <label style="float:left">Password</label><br>          
+        <input class="w3-input w3-border" type="password" required placeholder="Password" id="reg_pass" name="reg_pass" onblur="validatePassword(name)">
+        <span class="w3-tag w3-padding w3-round-small w3-red w3-center" id="pass_Error" style="display: none;">You must have least 6 character</span>
+      </p>
+
+      <button type="button" class="w3-button w3-large w3-2017-navy-peony" style="color:moccasin" onclick="validateForm()">Signup</button><br>
+      
+    </form>
+    <p>
+        Already have an  account?
+        <a href="login.html" active>click here</a>
+        <br><br>
+    </p>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script src="js/FirebaseData.js"></script>
+</body>
+
+</html>

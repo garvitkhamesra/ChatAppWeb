@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/w3-theme.css">
+<link rel="stylesheet" href="css/w3-fas.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="w3-container" align="center" style="padding: 20px;">  
+  <div class="w3-card-24" style="width: 25%;margin:50px;">
+    <header class="w3-container w3-2017-navy-peony ">
+        <h1 align="center" style="color:moccasin">Login Credentials</h1>
+    </header>
+
+    <form class="w3-container" action="" method="POST">
+      <br>
+      <p>
+      <label style="float:left">Email</label>
+      <input class="w3-input w3-border" id="reg_email" name="reg_email" type="email" required placeholder="Email address" onblur="validateEmail(value)">
+      <span class="w3-tag w3-padding w3-round-small w3-red w3-center" id="emailError" style="display: none;">You must enter a valid email address</span>
+      <br></p>
+      <p>  
+      <label style="float:left">Password</label>   
+      <input onblur="validatePassword(name)" class="w3-input w3-border" id = "password" name = "password" type="password" required placeholder="Password">
+      <span class="w3-tag w3-padding w3-round-small w3-red w3-center" id="pass_Error" style="display: none;">You must have least 6 character</span>
+      <br></p>
+               
+      <p>
+      <button type="button" class="w3-button w3-xlarge w3-2017-navy-peony" style="color:moccasin" onclick="validateLoginForm()">Login</button><br>
+      </p>
+    </form>
+    <p>
+      Don't have account?
+      <a href="register.html" active>click here</a>
+      <br><br>
+    </p>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script src="js/FirebaseData.js"></script>
+</body>
+</html>
